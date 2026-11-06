@@ -8,6 +8,8 @@ on:
 jobs:
   build-apk:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write  # هذه الصلاحية ضرورية جداً للسماح للسكربت بإنشاء الإصدار ورفع الملف
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
